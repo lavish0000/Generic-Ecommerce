@@ -3,18 +3,46 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@craco/craco": "^6.1.2",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "axios": "^0.21.1",
+    "google-map-react": "^2.1.10",
+    "i18next": "^20.3.2",
+    "i18next-browser-languagedetector": "^6.1.2",
+    "i18next-xhr-backend": "^3.2.2",
+    "node-sass": "^5.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-google-recaptcha": "^2.1.0",
+    "react-hot-toast": "^2.0.0",
+    "react-i18next": "^11.11.0",
+    "react-redux": "^7.2.4",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "redux": "^4.1.0",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.3.0",
+    "universal-cookie": "^4.0.4",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "REACT_APP_ENVIRONMENT=development craco start",
+    "start:dev": "./node_modules/.bin/env-cmd -f ./.env.dev craco start",
+    "start:beta": "REACT_APP_ENVIRONMENT=beta craco start",
+    "start:prod": "REACT_APP_ENVIRONMENT=production craco start",
+    "start:win": "set REACT_APP_ENVIRONMENT=development &&  craco start",
+    "start:win:beta": "set REACT_APP_ENVIRONMENT=beta &&  craco start",
+    "start:win:prod": "set REACT_APP_ENVIRONMENT=production &&  craco start",
+    "build": "REACT_APP_ENVIRONMENT=development craco build",
+    "build:dev": "./node_modules/.bin/env-cmd -f ./.env.dev craco build",
+    "build:beta": "REACT_APP_ENVIRONMENT=beta craco build",
+    "build:prod": "REACT_APP_ENVIRONMENT=production craco build",
+    "build:win": "set REACT_APP_ENVIRONMENT=development && craco build",
+    "build:win:beta": "set REACT_APP_ENVIRONMENT=beta && craco build",
+    "build:win:prod": "set REACT_APP_ENVIRONMENT=production && craco build",
+    "test": "craco test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -34,5 +62,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss7-compat": "^2.0.4",
+    "autoprefixer": "^9.8.6",
+    "postcss": "^7.0.36",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.4"
   }
 }

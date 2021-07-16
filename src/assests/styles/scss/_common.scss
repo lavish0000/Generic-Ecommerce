@@ -1,0 +1,17 @@
+.row {
+    @apply flex flex-wrap -mx-4
+}
+
+.form-control {
+    @apply appearance-none h-10 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none bg-white text-xs
+}
+
+// .dot{
+//     position:absolute;
+//     background-color:#d30000;
+//     width:10px;
+//     height:10px;
+//     border-radius: 50%;
+//     right: 28px;
+//     top: 6px;
+// }

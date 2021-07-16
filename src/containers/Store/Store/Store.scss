@@ -1,0 +1,8 @@
+.store .content-tabs li {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.store .content-tabs li.active {
+    border-bottom: 1px solid #40BC69;
+}
